@@ -1,0 +1,112 @@
+@import 'app/variables';
+@import 'app/base/module';
+@import 'utilities/normalize';
+@import 'utilities/helpers';
+@import 'utilities/mixins/module';
+@import 'utilities/fonts/variables';
+@import 'utilities/fonts/font-proxima-nova';
+@import 'utilities/layout/grid/grid';
+@import 'utilities/layout/grid';
+@import 'app/atoms/typography';
+@import 'app/atoms/icons';
+@import 'app/molecules/widget-help-center-header';
+@import 'app/molecules/widget-help-center-post';
+@import 'app/organisms/widget-help-center';
+
+html,
+body,
+.widget-help-center {
+  height: 100%;
+}
+
+.icon-hamburger {
+  cursor: pointer;
+}
+
+.widget-help-center-header {
+  border-bottom: 0;
+}
+
+.widget-help-center-content {
+  height: calc(100vh - 122px);
+  overflow: auto;
+  background: $color-alabaster;
+  padding: 10px 20px 20px;
+  border-radius: 0 0 6px 6px;
+}
+
+.widget-help-center-search-box {
+  background: $color-cornflower;
+  border-bottom: 1px solid $color-athens-gray;
+  padding: 17px 0 22px;
+  position: relative;
+
+  // .ais-SearchBox-form {
+  //   position: relative;
+  // }
+  .search-box-input {
+    width: 340px;
+    margin: auto;
+    position: relative;
+  }
+
+  input {
+    background: $color-white;
+    border-width: 0;
+    color: $color-outer-space;
+    font-size: 13px;
+    letter-spacing: .22px;
+    outline: none;
+    padding: 13px 25px 13px 40px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px 0 rgba(#000, .2);
+    &.active {
+      border-radius: 20px 20px 0 0;
+    }
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &::placeholder {
+      color: $color-gray-chateau;
+      letter-spacing: .22px;
+    }
+  }
+
+  .ais-SearchBox-submit {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: 'shoplo-kit';
+    left: 10px;
+    padding: 0;
+    position: absolute;
+    top: 8px;
+
+    &::before {
+      color: $color-pale-sky;
+      content: '\e940';
+      display: block;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .ais-SearchBox-reset {
+    display: none;
+  }
+}
+
+.ais-Hits {
+  height: calc(100vh - 144px);
+  margin-bottom: 30px;
+  overflow: auto;
+  padding: 30px 30px 0;
+}

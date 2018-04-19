@@ -1,0 +1,84 @@
+@import 'app/variables';
+@import 'app/base/module';
+@import 'utilities/mixins/module';
+
+.widget-help-center-products-popup {
+  @include transition(.2s);
+  background: $color-white;
+  border: 1px solid $color-mystic;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 41px;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+
+  &.active {
+    @include transition(.2s);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 20px auto 0;
+    padding: 0;
+    width: 300px;
+  }
+
+  li {
+    color: $color-pale-sky;
+    cursor: pointer;
+    flex: 1 0 33%;
+    flex-grow: 0;
+    font-size: 13px;
+    letter-spacing: .22px;
+    line-height: 16px;
+    margin: 0 0 25px;
+    text-align: center;
+
+    &.selected {
+      .widget-help-center-products-avatar {
+        @include transition(.2s);
+        box-shadow: 0 3px 10px 0 rgba(#000, .2);
+      }
+    }
+  }
+}
+
+.widget-help-center-products-avatar {
+  border-radius: 10px;
+  display: inline-block;
+  height: 60px;
+  margin: 0 0 8px;
+  width: 60px;
+
+  &.shoplo-store {
+    background: url('assets/hc-avatar-store.svg');
+  }
+
+  &.shoplo-multichannel {
+    background: url('assets/hc-avatar-multi.svg');
+  }
+
+  &.shoplo-chat,
+  &.shoplo-czat {
+    background: url('assets/hc-avatar-chat.svg');
+  }
+
+  &.shoplo-payments {
+    background: url('assets/hc-avatar-payments.svg');
+  }
+
+  &.shoplo-mobile,
+  &.aplikacja-mobilna {
+    background: url('assets/hc-avatar-mobile.svg');
+  }
+
+  &.shoplo {
+    background: url('assets/hc-avatar-mobile.svg');
+  }
+}

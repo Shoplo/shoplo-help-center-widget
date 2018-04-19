@@ -1,0 +1,50 @@
+@import 'app/variables';
+@import 'app/base/module';
+@import 'utilities/mixins/module';
+
+.help-center-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help-center-category-list-item {
+  @include transition(.2s);
+  color: $color-outer-space;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: .3px;
+  background: $color-white;
+  border: 1px solid $color-mystic;
+  border-radius: 5px;
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  margin-top: 10px;
+  position: relative;
+  cursor: pointer;
+  &:before {
+    @include transition(.2s);
+      color: $color-cornflower;
+      font-family: 'shoplo-kit';
+      right: 10px;
+      padding: 0;
+      position: absolute;
+      top: 16px;
+      content: '\e906';
+      display: block;
+      font-size: 16px;
+      line-height: 16px;
+      visibility: hidden;
+      opacity: 0;
+      @include transform(rotate(180deg));
+  }
+  &:hover {
+    @include transition(.2s);
+    border-color: $color-cornflower;
+    &:before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

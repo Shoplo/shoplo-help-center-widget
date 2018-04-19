@@ -1,0 +1,11 @@
+<button
+  (click)="handleClick($event)"
+  class="help-center-widget-go-back"
+>
+  <i class="icon icon-arrow-back"></i> Wróć
+</button>
+
+<div class="widget-help-center-post">
+    <h2>{{postContent.post_title}} <a href="{{postContent.permalink}}" target="_blank"><i class="icon icon-expand2"></i></a></h2>
+    <p>{{postContent.content | stripPostContent}}</p>             
+</div>

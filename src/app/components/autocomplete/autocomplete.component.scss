@@ -1,0 +1,34 @@
+@import 'app/variables';
+@import 'app/base/module';
+@import 'utilities/mixins/module';
+
+.help-center-autocomplete {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    max-height: 170px;
+    overflow: auto;
+    position: absolute;
+    background: $color-white;
+    border-top: 1px solid $color-athens-gray;
+    z-index: 9;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+.help-center-autocomplete-item {
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    color: $color-pale-sky;
+    line-height: 22px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

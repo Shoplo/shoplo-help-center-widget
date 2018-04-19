@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="60" height="60" rx="10"></rect>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-16">
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <rect stroke="#EAEEF2" stroke-width="1" x="0.5" y="0.5" width="59" height="59" rx="10"></rect>
+        </g>
+        <g id="Group" transform="translate(11.000000, 20.000000)">
+            <polygon id="Fill-269" fill="#FF4C6B" points="28.0790196 9.63351852 9.31372549 9.62962963 9.31372549 12.0581481 28.0790196 12.0598148"></polygon>
+            <path d="M27.5462745,13.3494444 L27.5462745,16.9122222 L10.4315588,16.912037 L10.4315588,13.3494444 L10.4315588,12.4138889 L10.4315588,7.24425926 L27.5462745,7.24407407 L27.5462745,12.4138889 L27.5462745,13.3494444 Z M27.5354706,4.81481481 L10.4494412,4.81481481 C9.10211765,4.81481481 8.00980392,5.90037037 8.00980392,7.24 L8.00980392,12.4138889 L8.00980392,13.3494444 L8.00980392,16.9162963 C8.00980392,18.2559259 9.10211765,19.3416667 10.4494412,19.3416667 L27.5354706,19.3416667 C28.8827941,19.3414815 29.9751078,18.2559259 29.9751078,16.9162963 L29.9751078,13.3494444 L29.9751078,12.4138889 L29.9751078,7.24 C29.9751078,5.90037037 28.8827941,4.81481481 27.5354706,4.81481481 Z" id="Fill-271" fill="#6A5AFF"></path>
+            <polygon id="Fill-273" fill="#6A5AFF" points="37.5268627 9.63055556 29.0588235 9.62962963 29.0588235 12.0577778 37.5268627 12.0583333"></polygon>
+            <polygon id="Fill-275" fill="#6A5AFF" points="37.4031765 0.00111111111 13.0392157 0 13.0392157 2.42833333 37.4031765 2.4287037"></polygon>
+            <polygon id="Fill-277" fill="#6A5AFF" points="13.0403333 0 13.0392157 5.735 15.4818333 5.735 15.4822059 0"></polygon>
+            <polygon id="Fill-279" fill="#6A5AFF" points="35.0209118 0 35.0196078 10.93 37.4624118 10.93 37.4629706 0"></polygon>
+            <polygon id="Fill-281" fill="#FF4C6B" points="4.86064706 7.22611111 0 7.22222222 0 9.65055556 4.86064706 9.65222222"></polygon>
+            <polygon id="Fill-283" fill="#FF4C6B" points="4.86064706 12.0407407 0 12.037037 0 14.4653704 4.86064706 14.467037"></polygon>
+            <polygon id="Fill-285" fill="#FF4C6B" points="4.86064706 17.0409259 0 17.037037 0 19.4655556 4.86064706 19.4672222"></polygon>
+        </g>
+    </g>
+</svg>

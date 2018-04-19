@@ -1,0 +1,12 @@
+<div class="widget-help-center-products-popup" [ngClass]="getShowClass()">
+  <ul>
+    <li 
+      *ngFor="let item of state.items"
+      (click)="refine($event, item)"
+      [class]="getItemClass(item)"
+    >
+      <span class="widget-help-center-products-avatar {{item.label | stripSpace}}"></span>
+      <span>{{item.label}}</span>
+    </li>
+  </ul>
+</div>

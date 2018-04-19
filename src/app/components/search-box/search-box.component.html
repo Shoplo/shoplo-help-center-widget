@@ -1,0 +1,13 @@
+
+<span class="ais-SearchBox-submit"></span>
+<input
+
+    type="text"
+    (blur)="handleBlur($event.target.value)"
+    (focus)="handleFocus($event.target.value)"
+    [value]="state.query"
+    (input)="handleChange($event.target.value)"
+    [ngClass]="getRoundClass()"
+  />
+
+

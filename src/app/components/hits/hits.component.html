@@ -1,0 +1,30 @@
+<!-- 
+<div class="is-hits-root">
+  <ul>
+    <li *ngFor="let hit of state.hits">
+      {{ hit.post_title }}
+    </li>
+  </ul>
+</div> -->
+
+<ul class="help-center-category-list">
+    <li
+      class="help-center-category-list-item align-middle"
+      *ngFor="let hit of state.hits"
+      (click)="handleClick(hit)"
+    >
+    {{ hit.post_title }}
+      <!-- <ng-ais-highlight attribute="highlighted" [hit]="item"></ng-ais-highlight> -->
+          <!-- <label >
+            <input
+              type="checkbox"
+              value="{{item.value}}"
+              [checked]="item.isRefined"
+            />
+            <span >
+              <ng-ais-highlight attribute="highlighted" [hit]="item"></ng-ais-highlight>
+            </span>
+            <span >{{item.count}}</span>
+          </label> -->
+    </li>
+  </ul>
