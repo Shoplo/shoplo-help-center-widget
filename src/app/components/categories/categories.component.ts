@@ -61,9 +61,9 @@ export class CategoriesComponent implements OnInit, OnChanges, OnDestroy {
       });
     }
     // console.log('connectRefinementList state', state);
-    if (!this.searchingInProgress) {
+    // if (!this.searchingInProgress) {
       this.state = state;
-    }
+    // }
     // console.log('this.state', this.state);
   }
 
@@ -73,7 +73,7 @@ export class CategoriesComponent implements OnInit, OnChanges, OnDestroy {
   ) {
     event.preventDefault();
     event.stopPropagation();
-    this.searching.emit(false);
+    // this.searching.emit(false);
     this.goToView.emit('posts');
     // console.log('item', item);
     if (this.state.canRefine) {

@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 import instantsearch from 'instantsearch.js/es';
-import { environment } from '../../environments/environment';
+import { LocalesService } from './locales.service';
 
 @Injectable()
 export class InstantSearchService {
-  search = instantsearch(environment.algolia);
+  public search_autocomplete: any;
+  public search: any;
 
-  constructor() {}
+  constructor(
+    private locales: LocalesService
+  ) {
+    this.search = instantsearch(locales.localData.algolia);
+    this.search_autocomplete = instantsearch(locales.localData.algolia);
+  }
 }

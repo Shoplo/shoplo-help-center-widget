@@ -23,6 +23,22 @@ export class StripRootCategoriesPipe implements PipeTransform {
       stripValue = value.replace('Instrukcje > Shoplo > ', '');
     }
 
+    if (value.indexOf('Manuals > Shoplo Store >') !== -1) {
+      stripValue = value.replace('Manuals > Shoplo Store > ', '');
+    }
+
+    if (value.indexOf('Manuals > Shoplo Multichannel >') !== -1) {
+      stripValue = value.replace('Manuals > Shoplo Multichannel > ', '');
+    }
+
+    if (value.indexOf('Manuals > Shoplo Chat >') !== -1) {
+      stripValue = value.replace('Manuals > Shoplo Chat > ', '');
+    }
+
+    if (value.indexOf('Manuals > Shoplo >') !== -1) {
+      stripValue = value.replace('Manuals > Shoplo > ', '');
+    }
+
     return stripValue;
   }
 

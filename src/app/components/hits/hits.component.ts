@@ -39,9 +39,9 @@ export class HitsComponent implements OnInit {
       });
     }
     // console.log('state', state);
-    if (!this.searchingInProgress) {
+    // if (!this.searchingInProgress) {
       this.state = state;
-    }
+    // }
   }
 
   public handleClick (data: object) {

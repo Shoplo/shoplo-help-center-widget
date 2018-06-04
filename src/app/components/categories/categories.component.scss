@@ -1,5 +1,5 @@
 @import 'app/variables';
-@import 'app/base/module';
+@import 'app/base/colors';
 @import 'utilities/mixins/module';
 
 .help-center-category-list {
@@ -17,8 +17,8 @@
   background: $color-white;
   border: 1px solid $color-mystic;
   border-radius: 5px;
-  height: 50px;
-  padding: 0 20px;
+  // height: 50px;
+  padding: 20px;
   display: flex;
   margin-top: 10px;
   position: relative;
@@ -26,18 +26,21 @@
   &:before {
     @include transition(.2s);
       color: $color-cornflower;
-      font-family: 'shoplo-kit';
+      font-family: 'hc-widget';
       right: 10px;
       padding: 0;
       position: absolute;
-      top: 16px;
+      top: 50%;
       content: '\e906';
       display: block;
       font-size: 16px;
       line-height: 16px;
       visibility: hidden;
       opacity: 0;
-      @include transform(rotate(180deg));
+      @include transform(translateY(-50%) rotate(180deg));
+      // @include transform(rotate(180deg));
+      
+      // @include transform();
   }
   &:hover {
     @include transition(.2s);
@@ -46,5 +49,105 @@
       visibility: visible;
       opacity: 1;
     }
+  }
+}
+
+.help-center-category-list-item-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(assets/quick-start.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; 
+  margin-right: 10px;
+
+  &.produkty,
+  &.products {
+    background-image: url(assets/box.svg);
+  }
+
+  &.wyglad-sklepu,
+  &.store-layout {
+    background-image: url(assets/bag-pencil.svg);
+  }
+
+  &.marketing {
+    background-image: url(assets/wand.svg);
+  }
+
+  &.ustawienia-poczatkowe,
+  &.initial-settings {
+    background-image: url(assets/suitcase.svg);
+  }
+
+  &.ustawienia-platnosci,
+  &.payments-settings {
+    background-image: url(assets/coin-tossed.svg);
+  }
+
+  &.zamowienia,
+  &.orders {
+    background-image: url(assets/orders.svg);
+  }
+
+  &.klienci,
+  &.customers {
+    background-image: url(assets/id-card.svg);
+  }
+
+  &.aplikacje,
+  &.apps {
+    background-image: url(assets/apps.svg);
+  }
+
+  &.domeny-i-wlasne-skrzynki-pocztowe,
+  &.domain-and-mailboxes {
+    background-image: url(assets/letter-send.svg);
+  }
+
+  &.pozostale,
+  &.others{
+    background-image: url(assets/others.svg);
+  }
+
+  &.ustawienia-dostawy,
+  &.delivery-settings {
+    background-image: url(assets/box-gear.svg);
+  }
+
+  &.wersje-jezykowe-sklepu,
+  &.store-language-versions {
+    background-image: url(assets/bag-star.svg);
+  }
+
+  &.blogi-i-strony-wlasne,
+  &.blogs-and-pages {
+    background-image: url(assets/monitor.svg);
+  }
+
+  &.raporty,
+  &.reports {
+    background-image: url(assets/reports.svg);
+  }
+
+  &.sprzedaz-na-innych-kanalach, 
+  &.sell-in-other-channels {
+    background-image: url(assets/cart-channels.svg);
+  }
+
+  &.kanaly-sprzedazy {
+    background-image: url(assets/cart-channels.svg);
+  }
+
+  &.zarzadzanie-produktami-i-stanami-magazynowymi {
+    background-image: url(assets/cart-gear.svg);
+  }
+
+  &.informacje-podstawowe {
+    background-image: url(assets/ribbon.svg);
+  }
+
+  &.faq {
+    background-image: url(assets/faq.svg);
   }
 }

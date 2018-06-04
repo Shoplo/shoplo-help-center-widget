@@ -1,5 +1,10 @@
 @import 'app/variables';
-@import 'app/base/module';
+// @import 'app/base/module';
+// @import 'app/base/reset';
+// @import 'app/base/font';
+// @import 'app/base/font-icon';
+// @import 'app/base/variables';
+@import 'app/base/colors';
 @import 'utilities/normalize';
 @import 'utilities/helpers';
 @import 'utilities/mixins/module';
@@ -8,11 +13,23 @@
 @import 'utilities/layout/grid/grid';
 @import 'utilities/layout/grid';
 @import 'app/atoms/typography';
-@import 'app/atoms/icons';
+@import 'font';
+// @import 'app/atoms/icons';
+@import 'app/atoms/buttons';
 @import 'app/molecules/widget-help-center-header';
 @import 'app/molecules/widget-help-center-post';
 @import 'app/organisms/widget-help-center';
+$color-violet: #6A5AFF;
+$color-alto: #D7D7D7;
+$btn-disabled-color: $color-alto;
+$btn-disabled-background-color: $color-alabaster;
+$btn-disabled-border-color: $color-alto;
 
+.btn-circle {
+  @include button-size(10px, 10px, 19px, 1, 50%);
+  width: 40px;
+  height: 40px;
+}
 html,
 body,
 .widget-help-center {
@@ -110,3 +127,112 @@ body,
   overflow: auto;
   padding: 30px 30px 0;
 }
+
+.widget-help-center-post {
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-outer-space;
+    letter-spacing: 0.4px;
+    line-height: 35px;
+    padding-right: 30px;
+    position: relative;
+    a {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      text-decoration: none;
+      color: $color-gray-chateau;
+      font-weight: 400;
+      i {
+          vertical-align: middle;
+      }
+    }
+  }
+  hr {
+    border-width: 0 0 1px;
+    border-color: $color-athens-gray;
+  }
+  h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 0;
+  }
+  h3 {
+    font-weight: 600;
+    line-height: 28px;
+    font-size: 18px;
+
+  }
+  a {
+      color: $color-cornflower;
+      text-decoration: none;
+  }
+  p {
+      margin-top: 0px;
+  }
+
+  img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+  }
+  strong, b {
+    font-weight: 600;
+  }
+  ul, ol {
+      list-style-position: outside;
+      padding: 0;
+      margin: 0 0 15px 15px;
+      li {
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+      }
+  }
+}
+
+.thumbs-rating {
+  padding: rem-calc(25) rem-calc(20);
+  background: $color-alabaster;
+  border: 1px solid $color-mystic;
+  margin-top: rem-calc(40);
+  margin-bottom: rem-calc(40);
+  border-radius: 4px;
+  @include breakpoint(sm down) {
+    text-align: center;
+  }
+  .thumbs-rating-label {
+    color: $color-pale-sky;
+    font-size: rem-calc(14);
+    line-height: rem-calc(19);
+    margin-right: rem-calc(30);
+    display: inline-block;
+    @include breakpoint(sm down) {
+      margin-bottom: 10px;
+      margin-right: 0;
+      display: block;
+    }
+  }
+  .btn {
+    margin-right: 10px;
+    color: $color-pale-sky;
+    @include breakpoint(sm down) {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    &:hover {
+      color: $color-violet;
+    }
+    &.active {
+      color: $color-white;
+      background-color: $color-violet;
+    }
+  }
+}
+$button-colors: (
+    'white-gray': ($color-pale-sky, $color-white, $color-alto, $color-pale-sky, $color-white, $color-alto, $btn-disabled-color, $btn-disabled-background-color, $btn-disabled-border-color, $color-pale-sky, $color-white, $color-alto, true, $btn-letter-spacing, 600)
+);
+@include btn-colors($button-colors);

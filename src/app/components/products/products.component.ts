@@ -3,6 +3,7 @@ import { connectHierarchicalMenu } from 'instantsearch.js/es/connectors';
 import { noop, isFunction, each, find } from 'lodash-es';
 import { InstantSearchService } from '../../services/instantsearch.service';
 import { HierarchicalMenuState } from './products.interface';
+import { LocalesService } from '../../services/locales.service';
 
 @Component({
   selector: 'app-products',
@@ -20,17 +21,12 @@ export class ProductsComponent implements OnInit, OnChanges {
     items: [],
     refine: noop
   };
-  public selectedProduct = 'Shoplo Store';
+  public selectedProduct = this.locale.localData.product;
 
   constructor(
-    private instantSearchService: InstantSearchService
-  ) { }
-
-
-  /**
-   * FIXME:
-   * - set rootPath as variable
-   */
+    private instantSearchService: InstantSearchService,
+    private locale: LocalesService
+  ) {}
 
   ngOnInit() {
     const widget = connectHierarchicalMenu(this.updateState)({
@@ -39,7 +35,7 @@ export class ProductsComponent implements OnInit, OnChanges {
       attributes: ['taxonomies_hierarchical.category.lvl0', 'taxonomies_hierarchical.category.lvl1'],
       showParentLevel: false,
       sortBy: ['count'],
-      rootPath: 'Instrukcje'
+      rootPath: this.locale.localData.rootProducts
     });
     // Register the Hits widget into the instantSearchService search instance.
     this.instantSearchService.search.addWidget(widget);
@@ -59,6 +55,7 @@ export class ProductsComponent implements OnInit, OnChanges {
     if (this.state.items.length === 0) {
       this.state = state;
       const initItem = find(this.state.items, {'label': this.selectedProduct});
+
       if (initItem) {
         setTimeout( () => {
           this.makeSelection(initItem);

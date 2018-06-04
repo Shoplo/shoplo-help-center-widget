@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChange, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, SimpleChange, EventEmitter, Input, Output } from '@angular/core';
 import { connectSearchBox } from 'instantsearch.js/es/connectors';
 
 import { InstantSearchService } from '../../services/instantsearch.service';
@@ -8,7 +8,7 @@ import { InstantSearchService } from '../../services/instantsearch.service';
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.scss']
 })
-export class SearchBoxComponent implements OnInit, OnChanges {
+export class SearchBoxComponent implements OnInit {
   // Define SearchBox initial state
   @Input() roundInput: boolean;
   @Output() searching = new EventEmitter();
@@ -23,11 +23,7 @@ export class SearchBoxComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     const widget = connectSearchBox(this.updateState);
-    this.instantSearchService.search.addWidget(widget());
-  }
-
-  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
-    console.log('changes', changes);
+    this.instantSearchService.search_autocomplete.addWidget(widget());
   }
 
   updateState = (state, isFirstRendering) => {
@@ -40,7 +36,6 @@ export class SearchBoxComponent implements OnInit, OnChanges {
     }
 
     this.state = state;
-    console.log('updateState', this.state);
   }
 
   public handleChange(query: string) {

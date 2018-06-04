@@ -26,7 +26,7 @@ export class AutocompleteComponent implements OnInit {
     const widget = connectHits(this.updateState);
     // console.log('dd', widget);
     // Register the Hits widget into the instantSearchService search instance.
-    this.instantSearchService.search.addWidget(widget());
+    this.instantSearchService.search_autocomplete.addWidget(widget());
   }
 
   updateState = (state, isFirstRendering) => {
