@@ -37,7 +37,7 @@ export class SinglePostComponent implements OnInit, OnChanges {
     }
   }
 
-  public handleClick () {
+  public handleClick (e) {
     this.goToView.emit('posts');
   }
 
