@@ -1,5 +1,5 @@
 <button
-  (click)="handleClick($event)"
+  (click)="handleClick"
   class="help-center-widget-go-back"
 >
   <i class="icon icon-arrow-back"></i> Back
@@ -8,7 +8,7 @@
 <div class="widget-help-center-post" *ngIf="post">
     <h1><span [innerHTML]="post.title.rendered"></span> <a href="{{post.link}}" target="_blank"><i class="icon icon-expand2"></i></a></h1>
     <div [innerHTML]="post.content.rendered | post"></div>
-    <div class="thumbs-rating">
+    <!--<div class="thumbs-rating">
       <h4 class="thumbs-rating-label">{{rateArticleText}}</h4>
       <button type="button" class="btn btn-circle btn-white-gray" [ngClass]="{'active': voteStatus.like}" (click)="vote(post.id, 'like')">
         <span class="icon icon-thumb-up"></span>
@@ -18,5 +18,5 @@
       </button>
       <input type="hidden" id="nonce" name="nonce" value="b3b1446359">
       <input type="hidden" name="_wp_http_referer" value="/pomoc/instrukcje/shoplo/sposoby-na-sprzedaz/">
-    </div>
+    </div>-->
 </div>
