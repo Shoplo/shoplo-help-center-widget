@@ -9,7 +9,7 @@
     <h1><span [innerHTML]="post.title.rendered"></span> <a href="{{post.link}}" target="_blank"><i class="icon icon-expand2"></i></a></h1>
     <div [innerHTML]="post.content.rendered | post"></div>
     <div class="thumbs-rating">
-      <h4 class="thumbs-rating-label">Czy artykuł był pomocny?</h4>
+      <h4 class="thumbs-rating-label">{{rateArticleText}}</h4>
       <button type="button" class="btn btn-circle btn-white-gray" [ngClass]="{'active': voteStatus.like}" (click)="vote(post.id, 'like')">
         <span class="icon icon-thumb-up"></span>
       </button>

@@ -12,6 +12,8 @@ export class LocalesService {
       this.localData = environment.widget_settings_en;
     }
 
+    this.localData.merchantSource = this.getParameterByName('merchantSource');
+
     if (this.getParameterByName('product') === 'store') {
       this.localData.product = 'Shoplo Store';
     }

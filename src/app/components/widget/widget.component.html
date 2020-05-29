@@ -5,8 +5,8 @@
 <app-categories (searching)="searching($event)" [product]="selectedProduct"></app-categories> -->
 <div class="widget-help-center row">
   <header class="widget-help-center-header align-middle sm-12">
-      <h1><i (click)="showProductPopup()" class="icon icon-hamburger"></i>Help center</h1>
-      <app-products  (clickOutside)="onClickedOutside($event)" [exclude]="'.icon-hamburger, .icon-close-small'" [show]="showProducts" (selectProduct)="selectProduct($event)"></app-products>
+      <h1><i (click)="showProductPopup()" class="icon icon-hamburger" *ngIf="merchantSource !== 'sumup'"></i>Help center</h1>
+      <app-products (clickOutside)="onClickedOutside($event)" [exclude]="'.icon-hamburger, .icon-close-small'" [show]="showProducts" (selectProduct)="selectProduct($event)" *ngIf="merchantSource !== 'sumup'"></app-products>
       <button (click)="closeWidget()"><i class="icon icon-close-small"></i></button>
   </header>
   <div class="widget-help-center-search-box sm-12">
@@ -17,7 +17,7 @@
   </div>
   <div class="widget-help-center-content sm-12">
       <!-- <div class="ais-Hits"> -->
-  
+
       <app-categories *ngIf="currentView === 'categories'" (goToView)="goToView($event)"  (searching)="searching($event)" [searchingInProgress]="searchingInProgress" [product]="selectedProduct"></app-categories>
 
       <app-back-to-categories *ngIf="currentView === 'posts'" (goToView)="goToView($event)"></app-back-to-categories>
@@ -26,7 +26,7 @@
       <app-single-post *ngIf="currentView === 'post'" [postContent]="postContent" (goToView)="goToView($event)"></app-single-post>
       <!-- </div> -->
       <!-- <div class="widget-help-center-post">
-          <h2>Jak dodać wersję językową? <a href=""><i class="icon icon-expand2"></i></a></h2>                
+          <h2>Jak dodać wersję językową? <a href=""><i class="icon icon-expand2"></i></a></h2>
           <p>Jak narodził się pomysł na markę Mana Mana? I skąd pomysł na użycie prawie zapomnianego już haftu kociewskiego na flagowym produkcie marki?↵Moja przygoda pod hasłem “Mana Mana” zaczęła się chwilę po ukończeniu uniwersytetu na kierunku dziennikarskim. Podczas studiów pracowałam w wielu redakcjach, mogłam posmakować każdego gatunku dziennikarstwa w praktyce, jednak jakoś nie porwało mnie to na tyle, bym straciła głowę dla pisania. Wydawało mi się, że brakuje mi kilku cech charakteru do bycia naprawdę dobrym dziennikarzem, przebijającym głową mury z uroczym błyskiem wścibskości w oku i jakąś taką wrodzoną nachalnością. Miałam chwilę czasu na zastanowienie się nad tym, czego naprawdę chcę, a rodzice bardzo mnie w tym wspierali, choć jestem pewna, że szykowali się raczej na usłyszenie mnie w radio jako redaktorki a nie zaproszonego gościa na wywiad, opowiadającej o tym jak to jest być projektantką torebek. ↵Torebki! To abstrakcja, że dziś ten produkt zajmuje mnie i moją rodzinę do reszty, bo nigdy nie byłam typem zakupoholiczki torebkowej, do dziś nie mam ani jednej markowej torby. Noszę tylko to, co okaże się nieudanym lub testowanym prototypem, żeby ocenić czy nic mi nie zawadza. Odnalazłam się za to w komponowaniu kolorów, faktur i konstruowaniu. Mana Mana powstała zupełnie przez przypadek</p>
       </div>
 

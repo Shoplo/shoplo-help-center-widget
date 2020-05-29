@@ -11,6 +11,7 @@ export class SinglePostComponent implements OnInit, OnChanges {
 
   public post: any;
   public voteStatus: any;
+  public rateArticleText: any;
 
   constructor(
     private singlePostService: SinglePostService
@@ -25,6 +26,8 @@ export class SinglePostComponent implements OnInit, OnChanges {
       like: false,
       dislike: false
     };
+
+    this.rateArticleText = this.singlePostService.getRateArticleText();
 
     if (data) {
       this.singlePostService.getPost(data.postContent.currentValue.objectID)
@@ -50,7 +53,7 @@ export class SinglePostComponent implements OnInit, OnChanges {
         dislike: true
       };
     }
-    
+
     this.singlePostService.submitVote(postId, data)
       .subscribe(response => {
         console.log('response', response);
