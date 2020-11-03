@@ -10,6 +10,7 @@ export const environment = {
     rootProducts: 'Manuals',
     wpApiUrl: 'https://www.shoplo.com/help/wp-json/wp/v2/',
     wpVoteUrl: 'https://www.shoplo.com/help/wp-admin/admin-ajax.php',
+    rateArticleText: 'Was this article helpful?',
     algolia: {
       apiKey: '1e0c6b677c9197f3efdcc7936c820c2d',
       appId: 'XW19CXV180',
@@ -21,6 +22,7 @@ export const environment = {
     rootProducts: 'Instrukcje',
     wpApiUrl: 'https://www.shoplo.pl/pomoc/wp-json/wp/v2/',
     wpVoteUrl: 'https://www.shoplo.pl/pomoc/wp-admin/admin-ajax.php',
+    rateArticleText: 'Czy artykuł był pomocny?',
     algolia: {
       apiKey: '1e0c6b677c9197f3efdcc7936c820c2d',
       appId: 'XW19CXV180',

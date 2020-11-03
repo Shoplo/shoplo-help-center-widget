@@ -1,15 +1,16 @@
+@import 'utilities/fonts/font-aktiv-grotesk';
 @import 'app/variables';
 // @import 'app/base/module';
 // @import 'app/base/reset';
 // @import 'app/base/font';
 // @import 'app/base/font-icon';
+ @import 'app/base/font-icon-hc';
 // @import 'app/base/variables';
 @import 'app/base/colors';
 @import 'utilities/normalize';
 @import 'utilities/helpers';
 @import 'utilities/mixins/module';
 @import 'utilities/fonts/variables';
-@import 'utilities/fonts/font-proxima-nova';
 @import 'utilities/layout/grid/grid';
 @import 'utilities/layout/grid';
 @import 'app/atoms/typography';
@@ -49,11 +50,11 @@ body,
   overflow: auto;
   background: $color-alabaster;
   padding: 10px 20px 20px;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 4px 4px;
 }
 
 .widget-help-center-search-box {
-  background: $color-cornflower;
+  background: $color-cerulean;
   border-bottom: 1px solid $color-athens-gray;
   padding: 17px 0 22px;
   position: relative;
@@ -76,10 +77,10 @@ body,
     outline: none;
     padding: 13px 25px 13px 40px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 4px;
     box-shadow: 0 3px 10px 0 rgba(#000, .2);
     &.active {
-      border-radius: 20px 20px 0 0;
+      border-radius: 4px 4px 0 0;
     }
     &:focus {
       &::placeholder {
@@ -167,7 +168,7 @@ body,
 
   }
   a {
-      color: $color-cornflower;
+      color: $color-cerulean;
       text-decoration: none;
   }
   p {
@@ -224,11 +225,11 @@ body,
       margin-left: 5px;
     }
     &:hover {
-      color: $color-violet;
+      color: $color-cerulean;
     }
     &.active {
       color: $color-white;
-      background-color: $color-violet;
+      background-color: $color-cerulean;
     }
   }
 }

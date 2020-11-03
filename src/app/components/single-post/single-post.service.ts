@@ -14,11 +14,16 @@ import * as _ from 'lodash';
 export class SinglePostService {
   private apiUrl = this.localesService.localData.wpApiUrl;
   private voteUrl = this.localesService.localData.wpVoteUrl;
+  private rateArticleText = this.localesService.localData.rateArticleText;
 
   constructor(
     private localesService: LocalesService,
     private http: HttpClient
   ) { }
+
+  getRateArticleText(): string {
+    return this.rateArticleText;
+  }
 
   getPost(postId: string): Observable<any> {
     const id = postId.replace('-0', '');

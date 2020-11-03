@@ -17,7 +17,7 @@ export class WidgetComponent implements AfterViewInit {
   public currentView = 'categories';
   public postContent: object;
   public roundInput = false;
-  public merchantSource = 'shoplo';
+  public merchantSource = this.locale.localData.merchantSource;
 
   constructor(
     private bridgeFactory: PostMessageBridgeFactory,

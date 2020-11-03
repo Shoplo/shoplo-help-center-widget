@@ -5,8 +5,8 @@
 <app-categories (searching)="searching($event)" [product]="selectedProduct"></app-categories> -->
 <div class="widget-help-center row">
   <header class="widget-help-center-header align-middle sm-12">
-      <h1><i *ngIf="merchantSource !== 'sumup'" (click)="showProductPopup()" class="icon icon-hamburger"></i>Help center</h1>
-      <app-products  (clickOutside)="onClickedOutside($event)" [exclude]="'.icon-hamburger, .icon-close-small'" [show]="showProducts" (selectProduct)="selectProduct($event)"></app-products>
+      <h1><i (click)="showProductPopup()" class="icon icon-hamburger" *ngIf="merchantSource !== 'sumup'"></i>Help center</h1>
+      <app-products (clickOutside)="onClickedOutside($event)" [exclude]="'.icon-hamburger, .icon-close-small'" [show]="showProducts" (selectProduct)="selectProduct($event)" *ngIf="merchantSource !== 'sumup'"></app-products>
       <button (click)="closeWidget()"><i class="icon icon-close-small"></i></button>
   </header>
   <div class="widget-help-center-search-box sm-12">
