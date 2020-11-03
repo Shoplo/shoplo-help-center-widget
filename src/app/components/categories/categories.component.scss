@@ -16,7 +16,7 @@
   letter-spacing: .3px;
   background: $color-white;
   border: 1px solid $color-mystic;
-  border-radius: 5px;
+  border-radius: 4px;
   // height: 50px;
   padding: 20px;
   display: flex;
@@ -25,7 +25,7 @@
   cursor: pointer;
   &:before {
     @include transition(.2s);
-      color: $color-cornflower;
+      color: $color-cerulean;
       font-family: 'hc-widget';
       right: 10px;
       padding: 0;
@@ -39,12 +39,12 @@
       opacity: 0;
       @include transform(translateY(-50%) rotate(180deg));
       // @include transform(rotate(180deg));
-      
+
       // @include transform();
   }
   &:hover {
     @include transition(.2s);
-    border-color: $color-cornflower;
+    border-color: $color-cerulean;
     &:before {
       visibility: visible;
       opacity: 1;
@@ -58,7 +58,7 @@
   background-image: url(assets/quick-start.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain; 
+  background-size: contain;
   margin-right: 10px;
 
   &.produkty,
@@ -130,7 +130,7 @@
     background-image: url(assets/reports.svg);
   }
 
-  &.sprzedaz-na-innych-kanalach, 
+  &.sprzedaz-na-innych-kanalach,
   &.sell-in-other-channels {
     background-image: url(assets/cart-channels.svg);
   }
