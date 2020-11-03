@@ -2,7 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IPostMessageEventTarget, PostMessageBridgeFactory } from 'ngx-post-message/ngx-post-message';
 import { InstantSearchService } from '../../services/instantsearch.service';
-import {LocalesService} from '../../services/locales.service';
+import { LocalesService } from '../../services/locales.service';
 
 @Component({
   selector: 'app-widget',
@@ -23,13 +23,14 @@ export class WidgetComponent implements AfterViewInit {
     private bridgeFactory: PostMessageBridgeFactory,
     private instantSearchService: InstantSearchService,
     private activatedRoute: ActivatedRoute,
-    private locale: LocalesService
+    private locale: LocalesService,
   ) {
     /**
      * IFrame context
      */
     const iFrame: IPostMessageEventTarget = window;
     const parentWindow: IPostMessageEventTarget = window.top;
+    this.merchantSource = this.locale.merchantSource;
 
       // The main usage scenario
     // bridgeFactory.makeInstance()

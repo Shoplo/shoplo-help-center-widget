@@ -5,11 +5,19 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 @Injectable()
 export class LocalesService {
   public localData: any;
+  public merchantSource: any;
   constructor(private activatedRoute: ActivatedRoute) {
-    if (this.getParameterByName('locale') === 'pl_PL') {
-      this.localData = environment.widget_settings_pl;
+    this.merchantSource = this.getParameterByName('merchantSource');
+    if (this.merchantSource === 'sumup') {
+      this.localData = environment[`widget_settings_${this.getParameterByName('locale').toLowerCase()}`] ?
+        environment[`widget_settings_${this.getParameterByName('locale').toLowerCase()}`] :
+        environment['widget_settings_en_gb'];
     } else {
-      this.localData = environment.widget_settings_en;
+      if (this.getParameterByName('locale') === 'pl_PL') {
+        this.localData = environment.widget_settings_pl;
+      } else {
+        this.localData = environment.widget_settings_en;
+      }
     }
 
     this.localData.merchantSource = this.getParameterByName('merchantSource');
