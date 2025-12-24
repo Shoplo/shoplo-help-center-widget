@@ -14,8 +14,8 @@
   "dependencies": {
     "@types/lodash-es": "^4.17.0",
     "algoliasearch": "^3.27.0",
-    "algoliasearch-helper": "^2.24.0",
-    "instantsearch.js": "^2.7.1"
+    "algoliasearch-helper": "^3.26.0",
+    "instantsearch.js": "^4.80.0"
   },
   "peerDependencies": {},
   "devDependencies": {
@@ -36,7 +36,7 @@
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
-    "angular-instantsearch": "^1.0.1",
+    "angular-instantsearch": "^4.4.3",
     "codelyzer": "^4.0.1",
     "core-js": "^2.4.1",
     "jasmine-core": "~2.8.0",
